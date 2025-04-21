@@ -1,12 +1,12 @@
 <?php
 function deletePhoto(int $id): array {
-    $url = "https://restful-api-photobooth-production.up.railway.app/photos.php?photo_id=" . urlencode($id) . "&apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526";
+    $url = "http://localhost/restful-api-articles/photos.php?photo_id=" . urlencode($id);
     $curl = curl_init($url);
     curl_setopt_array($curl, [
         CURLOPT_CUSTOMREQUEST => "DELETE",
         CURLOPT_RETURNTRANSFER => true, // Capture response as a string
         CURLOPT_HTTPHEADER => [
-            "apikey: 0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526"
+            "apikey: 716ed4002e5f1ddcaa91a5a19e57ccb0d6d7087d7590274fea196493fba0f2d1"
         ]
     ]);
     $response = curl_exec($curl);

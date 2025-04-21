@@ -1,6 +1,6 @@
 <?php
 function updateUsername(string $oldUsername, string $newUsername): array {
-    $url = 'https://restful-api-photobooth-production.up.railway.app/users.php?apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526';
+    $url = 'http://localhost/restful-api-photobooth/users.php';
     $data = [
         'old_username' => $oldUsername,
         'new_username' => $newUsername
@@ -12,7 +12,7 @@ function updateUsername(string $oldUsername, string $newUsername): array {
         CURLOPT_POSTFIELDS => http_build_query($data), // Encode data for PUT
         CURLOPT_HTTPHEADER => [
             "Content-Type: application/x-www-form-urlencoded",
-            "apikey: 0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526"
+            "apikey: 716ed4002e5f1ddcaa91a5a19e57ccb0d6d7087d7590274fea196493fba0f2d1"
         ]
     ]);
     $response = curl_exec($curl);
