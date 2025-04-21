@@ -1,5 +1,5 @@
 <?php
-function loginUser(string $username, string $password): array {
+function loginUser(string $username, string $password) {
     $url = 'https://restful-api-photobooth-production.up.railway.app/users.php?apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526';
     $data = [
         'username' => $username,
