@@ -4,9 +4,9 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-require_once __DIR__ . '/private/upload_photos.php';
-require_once __DIR__ . '/private/get_photos.php';
-require_once __DIR__ . '/private/delete_photo.php';
+require_once 'private/upload_photos.php';
+require_once 'private/get_photos.php';
+require_once 'private/delete_photo.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $result = uploadPhotos(

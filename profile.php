@@ -4,9 +4,9 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-require_once __DIR__ . '/private/update_username.php';
-require_once __DIR__ . '/private/get_gender.php';
-require_once __DIR__ . '/private/get_country.php';
+require_once 'private/update_username.php';
+require_once 'private/get_gender.php';
+require_once 'private/get_country.php';
 $errorMessage = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $result = updateUsername(
