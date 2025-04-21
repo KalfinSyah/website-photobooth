@@ -1,5 +1,5 @@
 <?php
-function loginUser(string $username, string $password) {
+function loginUser(string $username, string $password): array {
     $url = 'https://restful-api-photobooth-production.up.railway.app/users.php?apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526';
     $data = [
         'username' => $username,
@@ -9,10 +9,7 @@ function loginUser(string $username, string $password) {
     curl_setopt_array($curl, [
         CURLOPT_POST => true,
         CURLOPT_RETURNTRANSFER => true, // Capture response as a string
-        CURLOPT_POSTFIELDS => $data,
-        CURLOPT_HTTPHEADER => [
-            "apikey: 0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526"
-        ]
+        CURLOPT_POSTFIELDS => $data
     ]);
     $response = curl_exec($curl);
     if ($response === false) {
