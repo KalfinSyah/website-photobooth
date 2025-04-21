@@ -160,7 +160,7 @@ $othersPhotos = getPhotos();
                     </div>
                     
                     <div class="card-footer bg-primary d-flex justify-content-between align-items-center">
-                        <a href="profile.php" class="text-white"><i class="bi bi-person-circle me-2"></i><?php echo $_SESSION['username']; ?></a>
+                        <a href="profile.php" class="text-white" style="text-decoration: none;"><img src="https://picsum.photos/32"> <?php echo $_SESSION['username']; ?></a>
                         <a class="btn btn-danger btn-sm rounded-pill" href="logout.php">
                             <i class="bi bi-box-arrow-right me-2"></i>Logout
                         </a>
