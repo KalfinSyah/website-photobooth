@@ -33,7 +33,7 @@ function uploadPhotos(string $username, string $photo): array {
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POSTFIELDS => $data,
         CURLOPT_HTTPHEADER => [
-            "apikey: 716ed4002e5f1ddcaa91a5a19e57ccb0d6d7087d7590274fea196493fba0f2d1"
+            "apikey: 0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526"
         ]
     ]);
     $response = curl_exec($curl);
