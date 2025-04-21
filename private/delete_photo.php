@@ -1,6 +1,6 @@
 <?php
 function deletePhoto(int $id): array {
-    $url = "https://restful-api-photobooth-production.up.railway.app/photos.php?photo_id=" . urlencode($id);
+    $url = "https://restful-api-photobooth-production.up.railway.app/photos.php?photo_id=" . urlencode($id) . "&apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526";
     $curl = curl_init($url);
     curl_setopt_array($curl, [
         CURLOPT_CUSTOMREQUEST => "DELETE",

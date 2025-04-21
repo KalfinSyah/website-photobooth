@@ -1,6 +1,6 @@
 <?php
 function uploadPhotos(string $username, string $photo): array {
-    $url = 'https://restful-api-photobooth-production.up.railway.app/photos.php';
+    $url = 'https://restful-api-photobooth-production.up.railway.app/photos.php?apikey=0c2329c4a5a5c5d9996447d10f8506ce9401f801e0c836ffce1138d33ffe4526';
 
     // Extract MIME type and image data from the data URL
     if (!preg_match('/^data:image\/(\w+);base64,/', $photo, $matches)) {
