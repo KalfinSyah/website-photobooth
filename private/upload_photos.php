@@ -1,6 +1,6 @@
 <?php
 function uploadPhotos(string $username, string $photo): array {
-    $url = 'http://localhost/restful-api-photobooth/photos.php';
+    $url = 'https://restful-api-photobooth-production.up.railway.app/photos.php';
 
     // Extract MIME type and image data from the data URL
     if (!preg_match('/^data:image\/(\w+);base64,/', $photo, $matches)) {

@@ -1,6 +1,6 @@
 <?php
 function registerUser(string $username, string $password, string $re_enter_password): array {
-    $url = 'http://localhost/restful-api-photobooth/users.php';
+    $url = 'https://restful-api-photobooth-production.up.railway.app/users.php';
     $data = [
         'username' => $username,
         'password' => $password,

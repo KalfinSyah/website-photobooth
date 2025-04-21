@@ -1,6 +1,6 @@
 <?php
 function updateUsername(string $oldUsername, string $newUsername): array {
-    $url = 'http://localhost/restful-api-photobooth/users.php';
+    $url = 'https://restful-api-photobooth-production.up.railway.app/users.php';
     $data = [
         'old_username' => $oldUsername,
         'new_username' => $newUsername

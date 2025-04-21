@@ -1,9 +1,9 @@
 <?php
 function getPhotos(?string $username = null): array {
     if ($username) {
-        $url = "http://localhost/restful-api-photobooth/photos.php?username=" . urlencode($username);
+        $url = "https://restful-api-photobooth-production.up.railway.app/photos.php?username=" . urlencode($username);
     } else {
-        $url = "http://localhost/restful-api-photobooth/photos.php";
+        $url = "https://restful-api-photobooth-production.up.railway.app/photos.php";
     }
     $curl = curl_init($url);
     curl_setopt_array($curl, [
