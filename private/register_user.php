@@ -1,6 +1,6 @@
 <?php
 function registerUser(string $username, string $password, string $re_enter_password): array {
-    $url = 'http://localhost/restful-api-photobooth/users.php';
+    $url = 'http://localhost/website/restful-api-photobooth/users.php';
     $data = [
         'username' => $username,
         'password' => $password,
@@ -12,7 +12,7 @@ function registerUser(string $username, string $password, string $re_enter_passw
         CURLOPT_RETURNTRANSFER => true, // Capture response as a string
         CURLOPT_POSTFIELDS => $data,
         CURLOPT_HTTPHEADER => [
-            "apikey: 716ed4002e5f1ddcaa91a5a19e57ccb0d6d7087d7590274fea196493fba0f2d1"
+            "apikey: 189f93f83723a75f0aafb9896262e5c3f20e85755578544a83e1a3c822d57488"
         ]
     ]);
     $response = curl_exec($curl);
