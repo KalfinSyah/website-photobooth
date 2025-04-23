@@ -1,6 +1,6 @@
 <?php
 function uploadPhotos(string $username, string $photo): array {
-    $url = 'http://localhost/website/restful-api-photobooth/photos.php';
+    $url = 'http://localhost/web-service/restful-api-photobooth/photos.php';
 
     // Extract MIME type and image data from the data URL
     if (!preg_match('/^data:image\/(\w+);base64,/', $photo, $matches)) {
@@ -33,7 +33,7 @@ function uploadPhotos(string $username, string $photo): array {
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POSTFIELDS => $data,
         CURLOPT_HTTPHEADER => [
-            "apikey: 189f93f83723a75f0aafb9896262e5c3f20e85755578544a83e1a3c822d57488"
+            "apikey: 312de9777bff309a1a6cc1b1f5838f2ec514992703438a692ac8f1859e82a5a0"
         ]
     ]);
     $response = curl_exec($curl);
