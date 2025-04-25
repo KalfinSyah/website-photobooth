@@ -1,12 +1,13 @@
 <?php
+require_once __DIR__ . '/load_env.php';
 function deletePhoto(int $id): array {
-    $url = "http://localhost/web-service/restful-api-photobooth/photos.php?photo_id=" . urlencode($id);
+    $url =  $_ENV['BASEURLAPI'] . "/photos.php?photo_id=" . urlencode($id);
     $curl = curl_init($url);
     curl_setopt_array($curl, [
         CURLOPT_CUSTOMREQUEST => "DELETE",
         CURLOPT_RETURNTRANSFER => true, // Capture response as a string
         CURLOPT_HTTPHEADER => [
-            "apikey: 312de9777bff309a1a6cc1b1f5838f2ec514992703438a692ac8f1859e82a5a0"
+            "apikey: " . $_ENV['APIKEY']
         ]
     ]);
     $response = curl_exec($curl);

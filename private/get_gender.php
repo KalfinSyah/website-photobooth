@@ -3,7 +3,8 @@ function getGender(string $username): array {
     $url = 'https://api.genderize.io/?name=' . urlencode($username);
     $curl = curl_init($url);
     curl_setopt_array($curl, [
-        CURLOPT_RETURNTRANSFER => true, // Capture response as a string,
+        CURLOPT_RETURNTRANSFER => true, // Capture response as a string
+        CURLOPT_SSL_VERIFYPEER => false
     ]);
     $response = curl_exec($curl);
     if ($response === false) {
